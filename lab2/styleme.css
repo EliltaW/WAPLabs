@@ -15,7 +15,36 @@ p, li{
     color:black;
 
 }
-a{
-    color: red;
+a:link{
+    text-decoration: none;
 }
+a:hover{
+    color: red;
+    text-decoration: underline;
+}
+p::first-letter{
+    float: left;
+    font-size: 1.5em;
+    line-height: 1;
+    margin: .125em .25em;;
+}
+ul .Fchild{
+list-style-type: none;
+color: chocolate;
+}
+
+ol {
+    counter-reset: item 4;
+    list-style-type: none;
+  }
+  
+  ol>li {
+    counter-increment: item -1;
+  }
+  
+  ol>li::before {
+    content: counter(item) '. ';
+    color: #f23c50;
+  
+  }
 
